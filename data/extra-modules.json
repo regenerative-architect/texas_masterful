@@ -1,0 +1,122 @@
+{
+  "food": [
+    "Food-system dependency graph",
+    "Farm energy continuity",
+    "Agricultural broadband",
+    "Rural workforce housing",
+    "Market-price shock planning",
+    "Community kitchens",
+    "Food recovery & donation logistics",
+    "Emergency feeding sites",
+    "Regional aggregation hubs",
+    "Institutional procurement"
+  ],
+  "water": [
+    "Small-system technical assistance",
+    "Cyber/telemetry continuity",
+    "Power-water dependency",
+    "Source-water protection",
+    "Water affordability assistance",
+    "Emergency interties",
+    "Portable treatment planning",
+    "Lead/service-line planning",
+    "Industrial reuse coordination",
+    "Flood-water capture feasibility"
+  ],
+  "energy": [
+    "Telecom backup energy",
+    "Water-utility power continuity",
+    "Hospital/shelter critical power",
+    "Distributed-energy interoperability",
+    "Transformer/equipment lead times",
+    "Fuel logistics",
+    "Community resilience hubs",
+    "Building-electrification readiness",
+    "Grid-aware load planning",
+    "Critical-facility black-start planning"
+  ],
+  "housing": [
+    "Infrastructure concurrency",
+    "Workforce housing",
+    "Teacher/health-worker housing",
+    "Post-disaster temporary housing",
+    "Home repair workforce",
+    "Code literacy",
+    "Resilience retrofit finance",
+    "Broadband-ready housing",
+    "Water/energy burden coupling",
+    "Community land stewardship models"
+  ],
+  "resilience": [
+    "Resilience hubs",
+    "Cross-agency incident handoffs",
+    "Community warning accessibility",
+    "Volunteer coordination",
+    "Supply-chain dependency mapping",
+    "Continuity exercises",
+    "Recovery case routing",
+    "Infrastructure restoration sequencing",
+    "Offline operations drills",
+    "Critical-facility dependency maps"
+  ],
+  "health": [
+    "Clinic continuity",
+    "Public-health data literacy",
+    "Medical device power continuity",
+    "Rural referral pathways",
+    "Community paramedicine literacy",
+    "School health coordination",
+    "Emergency pharmacy continuity",
+    "Accessible alerting",
+    "Heat-health action planning",
+    "Health-resilience hubs"
+  ],
+  "insurance": [
+    "Policy-document vault planning",
+    "Mitigation-to-insurance evidence",
+    "Claims workflow rehearsal",
+    "Disaster contractor verification",
+    "Small-business continuity insurance literacy",
+    "Recovery cash-flow model",
+    "Temporary relocation plan",
+    "Household records portability",
+    "Catastrophe deductible planning",
+    "Community recovery navigation"
+  ],
+  "mobility": [
+    "Critical-route dependency map",
+    "Transit continuity",
+    "Rural ride coordination",
+    "Emergency fuel planning",
+    "EV resilience",
+    "School/health access routing",
+    "Freight staging",
+    "Accessible evacuation",
+    "Bridge/culvert dependency literacy",
+    "Broadband-supported mobility coordination"
+  ],
+  "learning": [
+    "Regional educator sharing",
+    "Teacher housing coordination",
+    "School resilience hubs",
+    "Broadband/homework continuity",
+    "Mobile CTE labs",
+    "Work-based learning exchange",
+    "Emergency learning continuity",
+    "Facilities-energy planning",
+    "School food/water continuity",
+    "Community credential pathways"
+  ],
+  "connectivity": [
+    "BEAD/BOOT project tracker literacy",
+    "Fiber/middle-mile dependencies",
+    "Pole replacement workflow",
+    "Public safety communications",
+    "Community anchor network planning",
+    "Affordability/adoption measurement",
+    "Network resilience power planning",
+    "Local speed-test evidence",
+    "Digital navigator programs",
+    "Cyber hygiene & recovery"
+  ]
+}

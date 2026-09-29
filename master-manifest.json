@@ -1,0 +1,162 @@
+{
+  "name": "Texas Master Systems OS",
+  "version": "2.6.0",
+  "snapshot": "2026-09-28",
+  "architecture": "local-first systems-of-systems PWA with decentralized peer collaboration and opportunistic public inference",
+  "domains": [
+    "food",
+    "water",
+    "energy",
+    "housing",
+    "resilience",
+    "health",
+    "insurance",
+    "mobility",
+    "learning",
+    "connectivity"
+  ],
+  "domainModuleEntries": 300,
+  "coordinationStores": [
+    "projects",
+    "tasks",
+    "comments",
+    "evidence",
+    "decisions",
+    "questions",
+    "handoffs",
+    "quests",
+    "chains",
+    "chainRuns",
+    "chainArtifacts"
+  ],
+  "backupSchemaVersion": 5,
+  "dependencies": {
+    "trystero": "0.25.3",
+    "webllm": "0.2.85",
+    "defaultWebLLMModel": "Hardware-autodetected; default is the lightest compatible model, with SmolLM2-360M-Instruct-q4f32_1-MLC as the built-in no-shader-f16 fallback record."
+  },
+  "multiplayer": {
+    "transport": "WebRTC",
+    "discovery": [
+      "nostr",
+      "mqtt",
+      "torrent",
+      "ipfs"
+    ],
+    "defaultPublicRoom": "texas-systems-public-commons-v2",
+    "autoPublicRoom": true,
+    "snapshotSync": true,
+    "localFallback": "BroadcastChannel",
+    "turn": "optional explicit fallback",
+    "legacyAdapter": "legacy-server/ optional Node/WebSocket"
+  },
+  "data": {
+    "statusRecords": 14,
+    "statusSnapshot": "2026-09-28",
+    "machineReadable": [
+      "data/texas-status.json",
+      "data/collaboration-roles.json",
+      "data/extra-modules.json",
+      "data/advanced-guides-additions.json"
+    ]
+  },
+  "offlineBoundary": "App shell and local records work offline after installation. WebLLM model/runtime artifacts can be staged into the dedicated PWA AI cache or installed from an offline model-pack folder. A service worker cannot bypass unsupported GPU features or fetch a host that is blocked before any local copy exists.",
+  "attribution": "Foster + Navi / Planetary Restoration Archive",
+  "gamification": {
+    "mode": "optional collaboration scaffolding",
+    "xp": "derived from completed work/evidence/decisions/handoffs with comment cap",
+    "quests": true,
+    "badges": true,
+    "levels": true
+  },
+  "actionableNexus": true,
+  "actionableCascadeLab": true,
+  "webllmFix": "Resilient AI delivery: local-runtime-first import, CDN fallback, hardware-aware compatibility filtering, PWA model-asset staging with shard-level retry, offline folder pack import, optional local endpoint, deterministic fallback.",
+  "webllmModelStudio": {
+    "runtimeRegistry": "prebuiltAppConfig.model_list",
+    "sortKey": "vram_required_MB",
+    "computeTiers": [
+      "tiny <=1.2GB",
+      "light 1.2-2.5GB",
+      "medium 2.5-4.5GB",
+      "heavy 4.5-7GB",
+      "extreme >7GB",
+      "unknown"
+    ],
+    "cacheBackends": [
+      "cache",
+      "indexeddb",
+      "opfs"
+    ],
+    "operations": [
+      "cache-status",
+      "download-cache",
+      "load-switch",
+      "unload-gpu",
+      "delete-cache",
+      "storage-estimate",
+      "request-persistence"
+    ],
+    "primaryEngine": "CreateMLCEngine direct engine",
+    "fallbackEngine": "CreateWebWorkerMLCEngine",
+    "catalogPresentation": "collapsible compute-tier groups and collapsible model rows"
+  },
+  "files": [
+    "ai-resilience.js",
+    "docs/WEBLLM_RESILIENT_PWA.md",
+    "vendor/README.md",
+    "models/README.md",
+    "tools/vendor_webllm.py",
+    "tools/download_default_model_pack.py",
+    "tools/download_default_model_pack.ps1",
+    ".github/workflows/pages-resilient-ai.yml",
+    "meta-chain.js",
+    "docs/META_CHAIN_ORCHESTRATOR.md",
+    "docs/META_CHAIN_SOURCE_LINEAGE.md"
+  ],
+  "webllmResilience": {
+    "assetCache": "tx-ai-assets-v1",
+    "shardRetry": true,
+    "offlineFolderImport": true,
+    "localRuntimeSlot": "vendor/webllm-0.2.85.mjs",
+    "localEndpointFallback": true,
+    "deterministicFallback": true
+  },
+  "metaChainOrchestrator": {
+    "bundledTemplates": 13,
+    "executionModes": [
+      "guided",
+      "autopilot",
+      "collaborative"
+    ],
+    "dagDependencies": true,
+    "stageCheckpoints": true,
+    "evidenceAttachments": true,
+    "aiRouting": "loaded resilient WebLLM with deterministic fallback",
+    "compilesTo": [
+      "projects",
+      "tasks",
+      "questions",
+      "handoffs",
+      "decisions",
+      "quests"
+    ],
+    "nexusSeed": true,
+    "cascadeSeed": true,
+    "sourceDerivedTemplate": "Empowerment & Collaborative Intelligence from prior Meta-Prompt Chain artifact"
+  },
+  "build": "tiered-local-ai",
+  "features": [
+    "tiered browser models",
+    "localhost 8B+ runtime",
+    "fail-safe responsive splash",
+    "generic model-pack installer"
+  ],
+  "publicInference": {
+    "defaultProvider": "Cloudflare Workers AI via user-deployed Worker",
+    "fastModel": "@cf/zai-org/glm-4.7-flash",
+    "heavyModel": "@cf/google/gemma-4-26b-a4b-it",
+    "optionalFallback": "OpenRouter Free via Worker secret",
+    "hardDependency": false
+  }
+}

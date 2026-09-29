@@ -1,0 +1,139 @@
+[
+  {
+    "id": "family",
+    "label": "Families / households",
+    "contributes": [
+      "lived experience",
+      "local observations",
+      "household constraints",
+      "adoption feedback"
+    ],
+    "needs": [
+      "plain language",
+      "privacy",
+      "affordability",
+      "accessibility"
+    ],
+    "handoff": "community organizations / service providers"
+  },
+  {
+    "id": "business",
+    "label": "Local businesses / employers",
+    "contributes": [
+      "operational demand",
+      "workforce needs",
+      "supply-chain constraints",
+      "co-investment"
+    ],
+    "needs": [
+      "reliability",
+      "cost clarity",
+      "permitting timelines",
+      "business continuity"
+    ],
+    "handoff": "economic development / utilities / education"
+  },
+  {
+    "id": "corporation",
+    "label": "Corporations / infrastructure operators",
+    "contributes": [
+      "capital",
+      "engineering",
+      "network operations",
+      "procurement capacity"
+    ],
+    "needs": [
+      "standards",
+      "clear interfaces",
+      "risk allocation",
+      "community evidence"
+    ],
+    "handoff": "government / local partners / suppliers"
+  },
+  {
+    "id": "education",
+    "label": "Schools / colleges / universities",
+    "contributes": [
+      "research",
+      "training",
+      "facilities",
+      "student/workforce pathways"
+    ],
+    "needs": [
+      "student privacy",
+      "accessibility",
+      "stable connectivity",
+      "community partners"
+    ],
+    "handoff": "employers / agencies / families"
+  },
+  {
+    "id": "government",
+    "label": "State / county / municipal government",
+    "contributes": [
+      "authority",
+      "public data",
+      "planning",
+      "permitting",
+      "grant administration"
+    ],
+    "needs": [
+      "lawful process",
+      "audit trail",
+      "public accountability",
+      "jurisdiction clarity"
+    ],
+    "handoff": "operators / institutions / public"
+  },
+  {
+    "id": "nonprofit",
+    "label": "Nonprofits / community organizations",
+    "contributes": [
+      "trusted relationships",
+      "outreach",
+      "navigation",
+      "mutual aid"
+    ],
+    "needs": [
+      "referral clarity",
+      "funding continuity",
+      "minimal data collection",
+      "local evidence"
+    ],
+    "handoff": "families / agencies / institutions"
+  },
+  {
+    "id": "research",
+    "label": "Researchers / technical experts",
+    "contributes": [
+      "measurement",
+      "evaluation",
+      "models",
+      "standards"
+    ],
+    "needs": [
+      "provenance",
+      "uncertainty labels",
+      "method transparency",
+      "data governance"
+    ],
+    "handoff": "decision owners / implementers"
+  },
+  {
+    "id": "emergency",
+    "label": "Emergency management / public safety",
+    "contributes": [
+      "incident command",
+      "continuity planning",
+      "warnings",
+      "resource coordination"
+    ],
+    "needs": [
+      "interoperability",
+      "offline modes",
+      "trusted contacts",
+      "clear triggers"
+    ],
+    "handoff": "utilities / health / transport / communities"
+  }
+]

@@ -1,0 +1,145 @@
+{
+  "snapshot": "2026-09-28",
+  "records": [
+    {
+      "domain": "connectivity",
+      "asOf": "2026-09-28",
+      "title": "Texas BEAD final proposal approved",
+      "status": "approved / grant-agreement and construction phase",
+      "fact": "Texas states that its BEAD Final Proposal was approved Dec. 4, 2025. The BDO selected 22 applicants to serve more than 240,000 broadband serviceable locations and more than 2,700 community anchor institutions, with $1.2 billion in federal grants and $177 million in state match; the BDO said projects could begin construction as soon as summer 2026.",
+      "source": "Texas Broadband Development Office",
+      "url": "https://comptroller.texas.gov/programs/broadband/funding/bead/",
+      "limits": "Award and proposal approval are not the same as active service at a specific address. Verify project/location status in official award files and with the provider."
+    },
+    {
+      "domain": "connectivity",
+      "asOf": "2026-09-28",
+      "title": "BOOT I and II infrastructure programs",
+      "status": "awarded / implementation",
+      "fact": "BOOT I reports $10.4 million awarded for 1,468 residential locations, 77 businesses and 15 community anchor institutions, with BOOT I projects due by Dec. 31, 2026. BOOT II reports $623.4 million awarded for 61,185 residential locations, 18,250 businesses and 2,191 community anchor institutions.",
+      "source": "Texas Broadband Development Office",
+      "url": "https://comptroller.texas.gov/programs/broadband/funding/boot/",
+      "limits": "Completion status is project-specific and updated by BDO; awarded locations are not automatically active connections."
+    },
+    {
+      "domain": "connectivity",
+      "asOf": "2026-08-12",
+      "title": "FCC broadband map remains challengeable",
+      "status": "ongoing data-quality process",
+      "fact": "The FCC Broadband Data Collection allows individuals to challenge a single Fabric location through the National Broadband Map, while governments and other eligible entities can submit bulk Fabric challenges through the BDC system.",
+      "source": "FCC Broadband Data Collection Help Center",
+      "url": "https://help.bdc.fcc.gov/hc/en-us/articles/8103890293275-How-to-Format-a-Bulk-Fabric-Challenge",
+      "limits": "The map reports provider-claimed availability; it is not a direct measure of affordability, adoption or experienced performance."
+    },
+    {
+      "domain": "water",
+      "asOf": "2026-09-28",
+      "title": "2027 State Water Plan adopted",
+      "status": "adopted Phase I; amendment process continuing",
+      "fact": "The Texas Water Development Board adopted the 2027 State Water Plan on July 23, 2026. It is based on all 16 regional water planning groups and identifies actionable strategies and projects with projected costs and sponsors.",
+      "source": "Texas Water Development Board",
+      "url": "https://www.twdb.texas.gov/waterplanning/swp/2027/",
+      "limits": "Some recommended project locations are planning-level or conceptual; project siting and implementation still require subsequent studies, approvals, financing and sponsor action."
+    },
+    {
+      "domain": "water",
+      "asOf": "2026-09-28",
+      "title": "2026 regional water plans approved",
+      "status": "approved",
+      "fact": "TWDB states that the adopted 2026 Regional Water Plans were approved by the Board on Jan. 22, 2026, covering Regions A through P and feeding the 2027 state planning cycle.",
+      "source": "Texas Water Development Board",
+      "url": "https://www.twdb.texas.gov/waterplanning/rwp/plans/2026/index.asp",
+      "limits": "Regional planning projections and recommended strategies are planning inputs, not guarantees of project delivery or future hydrologic conditions."
+    },
+    {
+      "domain": "energy",
+      "asOf": "2026-09-28",
+      "title": "ERCOT resource adequacy reporting",
+      "status": "ongoing monthly / periodic reporting",
+      "fact": "ERCOT's resource adequacy page identifies the Monthly Outlook for Resource Adequacy (MORA) as its current recurring outlook and publishes Capacity, Demand and Reserves reports plus generation-resource capacity forecasts.",
+      "source": "ERCOT",
+      "url": "https://www.ercot.com/gridinfo/resource",
+      "limits": "Resource adequacy reports are system-planning products and should not be interpreted as a guarantee of service to a particular customer or facility."
+    },
+    {
+      "domain": "housing",
+      "asOf": "2026-09-28",
+      "title": "2026 Texas low-income housing plan and annual report",
+      "status": "current annual planning reference",
+      "fact": "TDHCA's 2026 State of Texas Low Income Housing Plan and Annual Report provides a statewide housing-needs overview and reports on program administration, funding levels and resource distribution from the preceding fiscal year.",
+      "source": "Texas Department of Housing and Community Affairs",
+      "url": "https://www.tdhca.texas.gov/housing-resource-center-annual-or-biennial-plans-and-reports",
+      "limits": "Statewide and regional summaries do not substitute for local market, zoning, infrastructure, condition or household-level analysis."
+    },
+    {
+      "domain": "resilience",
+      "asOf": "2026-09-28",
+      "title": "Texas hazard-mitigation planning framework",
+      "status": "active program",
+      "fact": "TDEM maintains the State Hazard Mitigation Plan, reviews local mitigation plans and administers FEMA mitigation programs. TDEM notes that a FEMA-approved local hazard mitigation plan is required for eligibility under specified FEMA mitigation grants such as HMGP and BRIC.",
+      "source": "Texas Division of Emergency Management",
+      "url": "https://www.tdem.texas.gov/mitigation/hazard-mitigation-section",
+      "limits": "Grant availability and eligibility vary by disaster, funding cycle, jurisdiction and federal/state rules; verify current notices before planning around funding."
+    },
+    {
+      "domain": "health",
+      "asOf": "2026-09-28",
+      "title": "Texas Health Data public dashboards",
+      "status": "active public data platform",
+      "fact": "Texas DSHS provides public interactive dashboards through Texas Health Data, including maternal health, infant health, respiratory illness and other topic-specific datasets and reports.",
+      "source": "Texas Department of State Health Services",
+      "url": "https://healthdata.dshs.texas.gov/",
+      "limits": "Public-health dashboards may use different reporting periods, definitions and suppression rules; they are not a substitute for clinical diagnosis or emergency guidance."
+    },
+    {
+      "domain": "insurance",
+      "asOf": "2026-09-28",
+      "title": "Texas homeowners insurance market snapshot",
+      "status": "2025 preliminary / 2026 filing snapshot",
+      "fact": "TDI's market overview reports 8,233,096 active homeowners policies in 2025, an average annual homeowners premium of $3,489, and a -1.8% aggregate filed rate request for June-August 2026 on the page's current snapshot.",
+      "source": "Texas Department of Insurance",
+      "url": "https://tdi.texas.gov/general/texas-homeowners-insurance-market-overview.html",
+      "limits": "Statewide averages do not represent a quote, renewal outcome or risk profile for a specific property; policy terms and geography can materially change cost and coverage."
+    },
+    {
+      "domain": "mobility",
+      "asOf": "2026-09-28",
+      "title": "Texas statewide long-range transportation planning",
+      "status": "2050 plan framework",
+      "fact": "TxDOT describes the statewide long-range transportation plan as a 24-year multimodal planning blueprint and states that the SLRTP is updated every four years.",
+      "source": "Texas Department of Transportation",
+      "url": "https://www.txdot.gov/manuals/tpp/tpp/statewide_longrange_transportation_plan.html",
+      "limits": "Long-range plans guide strategy and performance; individual projects have separate development, environmental, funding and construction timelines."
+    },
+    {
+      "domain": "learning",
+      "asOf": "2026-09-28",
+      "title": "Texas educator data refreshed during 2026",
+      "status": "current dashboard releases",
+      "fact": "TEA lists the Newly Certified by Role dashboard/data as updated September 2026, Employed and Certified Teachers data as updated August 2026, and Teacher Retention/Attrition New Hires data as updated April 2026.",
+      "source": "Texas Education Agency",
+      "url": "https://tea.texas.gov/data-reports/educator-data/educator-reports-and-data",
+      "limits": "Statewide dashboards require local district/campus context before drawing staffing or program conclusions."
+    },
+    {
+      "domain": "food",
+      "asOf": "2026-09-28",
+      "title": "Texas agriculture grant and service portfolio",
+      "status": "active program directory",
+      "fact": "The Texas Department of Agriculture maintains statewide program directories spanning agricultural finance, production grants, nutrition/food-access grants, rural health grants and small-business/export assistance.",
+      "source": "Texas Department of Agriculture",
+      "url": "https://texasagriculture.gov/Grants-Services/Grants-and-Services",
+      "limits": "Program windows, eligibility, appropriations and application requirements change; verify the current notice before treating a program as available."
+    },
+    {
+      "domain": "cross-domain",
+      "asOf": "2026-01-20",
+      "title": "LCRA broadband + flood-monitoring grant illustrates cross-domain infrastructure",
+      "status": "grant announced",
+      "fact": "Texas BDO announced a $29 million grant to the Lower Colorado River Authority to expand rural high-speed internet and strengthen flood-monitoring infrastructure, explicitly linking connectivity, emergency management and regional infrastructure.",
+      "source": "Texas Comptroller / Broadband Development Office",
+      "url": "https://comptroller.texas.gov/about/media-center/news/20260120-acting-texas-comptroller-kelly-hancock-announces-broadband-development-office-29-million-grant-to-lower-colorado-river-authority-1766177275951",
+      "limits": "Announcement-level information does not establish construction completion, operating performance or service availability at any particular location."
+    }
+  ]
+}

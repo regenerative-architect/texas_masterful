@@ -1,0 +1,17 @@
+import fs from 'fs';
+import vm from 'vm';
+import assert from 'assert';
+const src=fs.readFileSync(new URL('../public-inference.js',import.meta.url),'utf8');
+const store=new Map();let lastFetch=null;
+const ctx={window:{},localStorage:{getItem:k=>store.get(k)||null,setItem:(k,v)=>store.set(k,String(v))},crypto:{randomUUID:()=> 'client-123'},document:{querySelector:()=>null},fetch:async(url,opts={})=>{lastFetch={url,opts};if(String(url).endsWith('/health'))return {ok:true,json:async()=>({fast_model:'fast',heavy_model:'heavy'}),text:async()=>''};return {ok:true,json:async()=>({model:'heavy',choices:[{message:{content:'substantive hosted plan'}}]}),headers:{get:k=>k==='x-tx-provider'?'cloudflare-workers-ai':null},text:async()=>''}},console};
+vm.createContext(ctx);vm.runInContext(src,ctx);
+assert.ok(ctx.window.TXPublicInference);
+assert.equal(ctx.window.TXPublicInference.policy().enabled,true);
+ctx.window.TXPublicInference.save({gateway:'https://example.workers.dev/',preferHeavy:true});
+const out=await ctx.window.TXPublicInference.generate({prompt:'plan',system:'system',taskMode:'comprehensive'});
+assert.equal(out.text,'substantive hosted plan');
+assert.equal(lastFetch.url,'https://example.workers.dev/v1/chat/completions');
+const body=JSON.parse(lastFetch.opts.body);
+assert.equal(body.metadata.task_mode,'comprehensive');
+assert.equal(lastFetch.opts.headers['x-tx-client'],'client-123');
+console.log('PASS v2.6 public inference client routing');

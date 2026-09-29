@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "texas-public-inference",
+  "main": "src/index.js",
+  "compatibility_date": "2026-09-28",
+  "ai": { "binding": "AI" },
+  "ratelimits": [
+    {
+      "name": "AI_RATE_LIMITER",
+      "namespace_id": "26092801",
+      "simple": { "limit": 12, "period": 60 }
+    }
+  ],
+  "vars": {
+    "ALLOWED_ORIGINS": "*",
+    "FAST_MODEL": "@cf/zai-org/glm-4.7-flash",
+    "HEAVY_MODEL": "@cf/google/gemma-4-26b-a4b-it",
+    "ENABLE_OPENROUTER": "0",
+    "OPENROUTER_MODEL": "openrouter/free",
+    "APP_URL": "https://regenerative-architect.github.io/texas_masterful/"
+  },
+  "observability": { "enabled": true }
+}

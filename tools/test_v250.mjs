@@ -1,0 +1,30 @@
+import fs from 'fs';
+import vm from 'vm';
+import assert from 'assert';
+const root=new URL('../',import.meta.url);
+// Tier module initialization/policy.
+const tier=fs.readFileSync(new URL('../ai-tiered-stack.js',import.meta.url),'utf8');
+const store=new Map();
+const ctx={window:{},localStorage:{getItem:k=>store.get(k)||null,setItem:(k,v)=>store.set(k,v)},document:{},location:{hostname:'127.0.0.1',origin:'http://127.0.0.1:8765'},fetch:async()=>{throw new Error('not used')},Event:class Event{constructor(t){this.type=t}}};
+vm.createContext(ctx);vm.runInContext(tier,ctx);
+assert.equal(ctx.window.TXAIDeployment.TIERS.length,5);
+assert.equal(ctx.window.TXAIDeployment.TIERS[0].model,'SmolLM2-360M-Instruct-q4f32_1-MLC');
+assert.equal(ctx.window.TXAIDeployment.TIERS[1].model,'Llama-3.2-1B-Instruct-q4f32_1-MLC');
+assert.equal(ctx.window.TXAIDeployment.TIERS[2].model,'Llama-3.2-3B-Instruct-q4f32_1-MLC');
+assert.equal(ctx.window.TXAIDeployment.policy().routing,'auto');
+// Splash fail-safe script: stub DOM and execute the inline pre-app script.
+const html=fs.readFileSync(new URL('../index.html',import.meta.url),'utf8');
+const sm=html.match(/<script>\s*\(\(\)=>\{[\s\S]*?failsafe-timeout[\s\S]*?<\/script>/);
+assert.ok(sm,'splash fail-safe inline script missing');
+const script=sm[0].replace(/^<script>|<\/script>$/g,'');
+const classes=new Set(),listeners={},timeouts=[];
+const splash={dataset:{},style:{},classList:{add:x=>classes.add(x)},setAttribute:(k,v)=>splash[k]=v,addEventListener:(t,f)=>listeners['splash:'+t]=f};
+const enter={addEventListener:(t,f)=>listeners['enter:'+t]=f},skip={addEventListener:(t,f)=>listeners['skip:'+t]=f};
+const dctx={window:{setTimeout:(f,ms)=>{timeouts.push({f,ms});return timeouts.length},dispatchEvent:()=>{}},document:{body:{classList:{add:x=>classes.add('body:'+x)}},getElementById:id=>id==='splash'?splash:id==='enterBtn'?enter:id==='skipBtn'?skip:null},CustomEvent:class{},console};
+vm.createContext(dctx);vm.runInContext(script,dctx);
+assert.ok(typeof dctx.window.__txCloseSplash==='function');
+listeners['enter:click']();
+assert.ok(classes.has('hidden')&&classes.has('body:splash-closed'),'enter must close splash');
+assert.equal(splash['aria-hidden'],'true');
+assert.ok(timeouts.some(x=>x.ms===7200),'hard fail-safe timeout missing');
+console.log('PASS v2.5 runtime unit checks: tier stack + independent splash dismissal');

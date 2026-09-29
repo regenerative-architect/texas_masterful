@@ -1,0 +1,29 @@
+{
+  "name": "Texas Master Systems OS v2.4 \u2014 Meta-Chain Orchestrator",
+  "short_name": "Texas Master OS",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#071018",
+  "theme_color": "#0c1722",
+  "description": "Ten-domain Texas systems-of-systems PWA with executable Meta-Chain orchestration, local-first evidence/workflows, resilient WebLLM and Trystero/WebRTC collaboration.",
+  "icons": [
+    {
+      "src": "./icons/texas-master-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icons/texas-master-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icons/texas-master.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

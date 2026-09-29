@@ -1,0 +1,114 @@
+[
+  {
+    "id": "snapshot-sync",
+    "title": "Peer snapshot synchronization",
+    "one": "When a new participant joins a room, peers can answer a snapshot request with their current shared coordination records so the newcomer does not need a central application database.",
+    "steps": [
+      "Join with a non-sensitive room ID.",
+      "Let snapshot exchange complete before editing shared records.",
+      "Review received projects/tasks/decisions/comments.",
+      "Resolve conflicts using revision and update timestamps.",
+      "Export a local JSON backup before major merges."
+    ],
+    "advanced": "This build uses a Trystero request action for state snapshots. Every peer can respond with a sanitized, bounded snapshot. Received records pass the same schema whitelist used by file imports.",
+    "expert": "Snapshot sync is eventual, peer-provided state\u2014not consensus. For stronger consistency, add signed operation logs, vector/Lamport clocks, CRDTs or an authoritative service appropriate to the governance requirements."
+  },
+  {
+    "id": "turn",
+    "title": "TURN as explicit fallback",
+    "one": "WebRTC usually connects peers directly, but some NAT/firewall combinations require TURN. TURN relays packets when direct connectivity cannot be established.",
+    "steps": [
+      "Try direct connection first.",
+      "If SDP is exchanged but peers never connect, review Trystero join errors.",
+      "Add a TURN URL and short-lived credentials only when needed.",
+      "Test across real institutional networks.",
+      "Monitor relay cost and retention/logging policy."
+    ],
+    "advanced": "Trystero accepts turnConfig while retaining its default STUN servers. TURN is transport fallback, not hidden application storage; peer traffic remains WebRTC encrypted, but a relay still observes transport metadata.",
+    "expert": "Use time-limited TURN credentials, TLS where supported, capacity planning, abuse controls and regional failover. Treat TURN operator access and network metadata as part of the threat model."
+  },
+  {
+    "id": "public-room",
+    "title": "Public Commons and unverified presence",
+    "one": "The default public room is a rendezvous for collaboration presence. A Trystero peer ID proves only that a browser peer is connected; it does not verify a person's name, employer or authority.",
+    "steps": [
+      "Do not trust role labels as identity proof.",
+      "Share no protected records in the public room.",
+      "Use a password-protected private room for working groups.",
+      "Verify organizational identity out-of-band for consequential decisions.",
+      "Record authoritative decisions in your formal system of record."
+    ],
+    "advanced": "Pseudonymous presence can support discovery and lightweight collaboration, but identity assurance is a separate system. Room passwords strengthen session-description encryption and access by shared secret; they do not establish institutional identity.",
+    "expert": "For higher assurance, add an explicit admission handshake with signed organizational keys, short-lived credentials or an institution-managed identity layer while preserving data-minimization principles."
+  },
+  {
+    "id": "broadband-projects",
+    "title": "Texas broadband project pipeline",
+    "one": "Texas now has overlapping broadband programs at different stages. Treat award, construction, activation and adoption as separate states.",
+    "steps": [
+      "Start with BDO BEAD/BOOT award files.",
+      "Locate the project/location identifier.",
+      "Check the latest completion status or grant agreement.",
+      "Compare FCC-map claims with local evidence.",
+      "Record activation only after service is actually orderable/confirmed."
+    ],
+    "advanced": "BEAD, BOOT, pole replacement, middle-mile, local utility work and private construction can interact. A project registry should record program, awardee, geography, technology, stage, dependencies, challenge history and freshness date.",
+    "expert": "For longitudinal analysis, version the underlying FCC Fabric/location set and preserve award amendments. Avoid comparing location counts across Fabric versions without documenting the change in the denominator."
+  },
+  {
+    "id": "multidisciplinary",
+    "title": "Institution-to-family collaboration design",
+    "one": "Cross-domain work succeeds when every participant knows what they contribute, what they need from others, and what constitutes an accepted handoff.",
+    "steps": [
+      "Name the shared outcome.",
+      "List families, businesses, institutions, operators and government roles.",
+      "Define inputs/outputs for each role.",
+      "Create tasks, open questions and handoffs.",
+      "Record decisions with evidence and review triggers."
+    ],
+    "advanced": "Use the project record as a boundary object. Keep discipline-specific detail in its native language, but normalize interface fields: owner, input, output, units, deadline, evidence, uncertainty and acceptance condition.",
+    "expert": "Model the collaboration as a typed dependency graph. Separate governance authority, technical responsibility, funding responsibility, operations responsibility and affected-party voice; they are often held by different actors."
+  },
+  {
+    "id": "data-sovereignty",
+    "title": "Data sovereignty and conflict resolution",
+    "one": "Local-first means your browser holds the working record by default. Sharing is explicit, backups are portable, and no automatic cloud account is required for core functions.",
+    "steps": [
+      "Export JSON backups regularly.",
+      "Keep sensitive records out of peer rooms.",
+      "Review imported schema before merge.",
+      "Use revisions/timestamps to resolve ordinary conflicts.",
+      "Preserve authoritative external records in their official systems."
+    ],
+    "advanced": "This build whitelists fields, limits imported file size and sanitizes peer records. Local-first is not the same as infallible persistence\u2014browser storage can be cleared or evicted.",
+    "expert": "For institutional deployment add retention policies, encrypted-at-rest storage where justified, signed exports, migration tests, access-control boundaries and a documented conflict-resolution authority."
+  },
+  {
+    "id": "actionable-nexus",
+    "title": "Actionable Cross-Domain Nexus",
+    "one": "Turn a shared outcome into explicit system dependencies, baseline tasks and interface handoffs that can be saved into the coordination board.",
+    "steps": [
+      "Write one measurable outcome.",
+      "Select at least two systems that can enable or block it.",
+      "Generate the dependency plan.",
+      "Review owner, evidence, threshold and acceptance condition for each interface.",
+      "Save the plan as executable tasks and handoffs."
+    ],
+    "advanced": "Treat each cross-domain edge as an interface contract rather than a vague relationship.",
+    "expert": "Use typed dependency edges, boundary objects, versioned assumptions and explicit authority/resource metadata for complex portfolios."
+  },
+  {
+    "id": "cascade-to-action",
+    "title": "Cascade Lab to action conversion",
+    "one": "The Cascade Lab exposes a planning heuristic, then turns its output into prioritized actions, evidence questions, handoffs and optional quests.",
+    "steps": [
+      "Enter the stressors you want to explore.",
+      "Set duration and readiness.",
+      "Inspect propagated scores and the disclosed method.",
+      "Review generated actions and evidence questions.",
+      "Convert to project work only after local validation."
+    ],
+    "advanced": "The model propagates user-entered stress through a fixed dependency graph and does not calculate event probability.",
+    "expert": "Replace heuristic weights only with locally validated dependency matrices, service thresholds or calibrated models, while preserving assumptions and version history."
+  }
+]

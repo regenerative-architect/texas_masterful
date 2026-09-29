@@ -1,36 +1,55 @@
-# This is a basic workflow to help you get started with Actions
-
-name: CI
-
-# Controls when the workflow will run
+name: Deploy Texas OS + Optional Same-Origin AI Pack
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+    inputs:
+      model_pack:
+        description: "Optional same-origin browser model pack to include in the Pages artifact"
+        required: true
+        default: "none"
+        type: choice
+        options:
+          - none
+          - fallback-360m
+          - standard-1b
+          - advanced-3b
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Vendor WebLLM runtime
+        run: python tools/vendor_webllm.py
+      - name: Build selected offline model pack
+        if: ${{ inputs.model_pack != 'none' }}
+        shell: bash
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          case "${{ inputs.model_pack }}" in
+            fallback-360m) MODEL="SmolLM2-360M-Instruct-q4f32_1-MLC" ;;
+            standard-1b) MODEL="Llama-3.2-1B-Instruct-q4f32_1-MLC" ;;
+            advanced-3b) MODEL="Llama-3.2-3B-Instruct-q4f32_1-MLC" ;;
+          esac
+          python tools/download_model_pack.py "$MODEL"
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
